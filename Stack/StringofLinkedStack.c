@@ -28,9 +28,9 @@ char *pop(struct Stack *s){
         return NULL;
     }
     struct Node *popnode;
+    char *tmp;
     popnode=s->first;
-    char *tmp=(char *)malloc(sizeof(char)*strlen(popnode->str));
-    strcpy(tmp,popnode->str);
+    tmp=popnode->str;
     s->first=popnode->next;
     free(popnode);
     return tmp;
